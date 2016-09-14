@@ -16,14 +16,10 @@ function deleteCard(event){
 }
 
 function deleteListenerEvent(){
-	for (var i = 0; i < deleteListener.length; i++) {
-		var deleteEvent = document.getElementsByClassName("delete");
-		for (var h = 0; h < deleteEvent.length; h++) {
-			deleteEvent[h].addEventListener("click", deleteCard);
-		}
+	for (var i = 0; i < deleteListener.length; i+=1) {
+			deleteListener[i].addEventListener("click", deleteCard);
 	}
 }	
-
 
 function enterKeyPressed(keypress){
 	if (keypress.which === 13) {
@@ -33,4 +29,4 @@ function enterKeyPressed(keypress){
 }
 
 createButton.addEventListener("click", createCard);
-document.addEventListener("keypress", enterKeyPressed)
+document.addEventListener("keypress", enterKeyPressed);
